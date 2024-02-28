@@ -1,3 +1,6 @@
+# Endpoint URL
+ec2-44-203-163-253.compute-1.amazonaws.com:9191
+
 # Introduction 
 This is a simple REST API for a simple dating application like Tinder / Bumble. This application is built using Go and PostgreSQL. This application has the following features:
 - User registration
@@ -10,7 +13,7 @@ This is a simple REST API for a simple dating application like Tinder / Bumble. 
 make sure you have installed the following tools:
 - Install [Go - 1.22.0](https://www.python.org/downloads/)
 - Install [Docker - 4.27.2](https://www.docker.com/products/docker-desktop)
-- Install [Docker Compose - 4.27.2](https://docs.docker.com/compose/install/)
+- Install [Docker Compose](https://docs.docker.com/compose/install/)
 - make sure your OS support to run Makefile
 - install [Dbmate](https://github.com/amacneil/dbmate) for database migration
 

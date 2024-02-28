@@ -76,6 +76,24 @@ func (_m *MockRepository) GetOne(ctx context.Context, accountID string) (*models
 	return r0, r1
 }
 
+// UpdateOne provides a mock function with given fields: ctx, data
+func (_m *MockRepository) UpdateOne(ctx context.Context, data *models.Membership) error {
+	ret := _m.Called(ctx, data)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateOne")
+	}
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, *models.Membership) error); ok {
+		r0 = rf(ctx, data)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
 // NewMockRepository creates a new instance of MockRepository. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
 // The first argument is typically a *testing.T value.
 func NewMockRepository(t interface {

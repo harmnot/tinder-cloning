@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"dony@mail.com\",\n    \"username\": \"dony\",\n    \"password\": \"12345678\",\n    \"gender\": \"MALE\",\n    \"location\": \"Banjarmasin\",\n    \"bio\": \"ini di banjarmasin\",\n    \"avatar\": \"https://example.com/avatar.jpg\",\n    \"date_of_birth\": \"1998-01-01\"\n}",
+					"raw": "{\n    \"email\": \"muh@mail.com\",\n    \"username\": \"muh\",\n    \"password\": \"12345678\",\n    \"gender\": \"MALE\",\n    \"location\": \"Banjarmasin\",\n    \"bio\": \"i am from banjarmasin\",\n    \"avatar\": \"https://example.com/avatar.jpg\",\n    \"date_of_birth\": \"1994-01-09\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"dony@mail.com\",\n    \"password\": \"12345678\"\n}",
+					"raw": "{\n    \"email\": \"muh@mail.com\",\n    \"password\": \"12345678\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -50,11 +50,35 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWE5YTI0MGUtM2U0Zi00MjEyLWIyOTYtOGZjYWZmNGJiMWZhIiwiZXhwIjoxNzA5MTQ4MTI3fQ.uNAV93q6QsgfzpxvC3MH893tp_uXJItKwAnQEbduyxE",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWUzMDk3ZGYtNWVhZi00ZTlkLWFkZTEtMWY1MDZhYzE0OThmIiwiZXhwIjoxNzA5MTY0Njc3fQ.sWRBnQM2nW8mB7DdkY6pvhXqdVfw9Iec87hc1W15u3U",
 						"type": "text"
 					}
 				],
 				"url": "http://localhost:9191/membership/v1/features"
+			},
+			"response": []
+		},
+		{
+			"name": "Membership Upgrade",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWUzMDk3ZGYtNWVhZi00ZTlkLWFkZTEtMWY1MDZhYzE0OThmIiwiZXhwIjoxNzA5MTY0Njc3fQ.sWRBnQM2nW8mB7DdkY6pvhXqdVfw9Iec87hc1W15u3U",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"level_name\": \"gold\",\n    \"how_many_month\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/membership/v1/upgrade"
 			},
 			"response": []
 		},
@@ -65,7 +89,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiZDg2NTUxZDAtYjgyMS00NzhmLWFmMTMtNDI1NzcwMzlkODg0IiwiZXhwIjoxNzA5MTI1NzQxfQ.DFckBwKCt6GA8OxpouH8at1lmk1CyOfQUfigvJRauYU",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWUzMDk3ZGYtNWVhZi00ZTlkLWFkZTEtMWY1MDZhYzE0OThmIiwiZXhwIjoxNzA5MTY0Njc3fQ.sWRBnQM2nW8mB7DdkY6pvhXqdVfw9Iec87hc1W15u3U",
 						"type": "text"
 					}
 				],
@@ -92,7 +116,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWE5YTI0MGUtM2U0Zi00MjEyLWIyOTYtOGZjYWZmNGJiMWZhIiwiZXhwIjoxNzA5MTQ4MTI3fQ.uNAV93q6QsgfzpxvC3MH893tp_uXJItKwAnQEbduyxE",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWUzMDk3ZGYtNWVhZi00ZTlkLWFkZTEtMWY1MDZhYzE0OThmIiwiZXhwIjoxNzA5MTY0Njc3fQ.sWRBnQM2nW8mB7DdkY6pvhXqdVfw9Iec87hc1W15u3U",
 						"type": "text"
 					}
 				],
@@ -122,8 +146,7 @@
 						},
 						{
 							"key": "per_page",
-							"value": "30",
-							"description": "limit only up to 30"
+							"value": "30"
 						},
 						{
 							"key": "gender",

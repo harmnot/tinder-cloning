@@ -56,3 +56,17 @@ func (m *membershipRepositoryImpl) GetOne(ctx context.Context, accountID string)
 
 	return &membership, nil
 }
+
+func (m *membershipRepositoryImpl) UpdateOne(ctx context.Context, data *models.Membership) error {
+	_, err := m.db.ExecContext(ctx, `
+		UPDATE memberships 
+		SET membership_type = $1, start_date = $2, end_date = $3, payment_method = $4, updated_at = now()
+		WHERE account_id = $5`, data.MembershipType, data.StartDate, data.EndDate, data.PaymentMethod, data.AccountID,
+	)
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+}

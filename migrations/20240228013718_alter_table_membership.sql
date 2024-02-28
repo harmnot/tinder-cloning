@@ -8,7 +8,8 @@ CREATE TABLE memberships
     start_date      DATE,
     end_date        DATE,
     payment_method  VARCHAR(50),
-    created_at      TIMESTAMPTZ NOT NULL DEFAULT now()
+    created_at      TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at      TIMESTAMPTZ
 );
 
 -- migrate:down

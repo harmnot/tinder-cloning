@@ -78,6 +78,24 @@ func (_m *MockMembershipUseCase) GetFeatureMembership(ctx context.Context, accou
 	return r0, r1
 }
 
+// UpdateOne provides a mock function with given fields: ctx, data
+func (_m *MockMembershipUseCase) UpdateOne(ctx context.Context, data *schema.UpgradeMembership) error {
+	ret := _m.Called(ctx, data)
+
+	if len(ret) == 0 {
+		panic("no return value specified for UpdateOne")
+	}
+
+	var r0 error
+	if rf, ok := ret.Get(0).(func(context.Context, *schema.UpgradeMembership) error); ok {
+		r0 = rf(ctx, data)
+	} else {
+		r0 = ret.Error(0)
+	}
+
+	return r0
+}
+
 // NewMockMembershipUseCase creates a new instance of MockMembershipUseCase. It also registers a testing interface on the mock and a cleanup function to assert the mocks expectations.
 // The first argument is typically a *testing.T value.
 func NewMockMembershipUseCase(t interface {

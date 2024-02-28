@@ -10,4 +10,5 @@ import (
 type MembershipUseCase interface {
 	CreateOne(ctx context.Context, sqlTx *sql.Tx, data *models.Membership) (*sql.Tx, error)
 	GetFeatureMembership(ctx context.Context, accountID string) (*schema.FeatureMembership, error)
+	UpdateOne(ctx context.Context, data *schema.UpgradeMembership) error
 }

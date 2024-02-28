@@ -19,7 +19,7 @@ func NewMembershipUseCase(repo repository.Repository) MembershipUseCase {
 	return &implementMembershipUseCase{repo: repo, time: util.ProvideNewTimesCustom()}
 }
 
-func (i implementMembershipUseCase) CreateOne(ctx context.Context, sqlTx *sql.Tx, data *models.Membership) (*sql.Tx, error) {
+func (i *implementMembershipUseCase) CreateOne(ctx context.Context, sqlTx *sql.Tx, data *models.Membership) (*sql.Tx, error) {
 	paymentMethod := ""
 	if strings.ToLower(data.MembershipType) != LevelFree && data.PaymentMethod != "" {
 		paymentMethod = data.PaymentMethod
@@ -41,7 +41,7 @@ func (i implementMembershipUseCase) CreateOne(ctx context.Context, sqlTx *sql.Tx
 	return i.repo.CreateOne(ctx, sqlTx, payload)
 }
 
-func (i implementMembershipUseCase) GetFeatureMembership(ctx context.Context, accountID string) (*schema.FeatureMembership, error) {
+func (i *implementMembershipUseCase) GetFeatureMembership(ctx context.Context, accountID string) (*schema.FeatureMembership, error) {
 	membership, err := i.repo.GetOne(ctx, accountID)
 	if err != nil {
 		return nil, err
@@ -72,5 +72,45 @@ func (i implementMembershipUseCase) GetFeatureMembership(ctx context.Context, ac
 		}
 	}
 
+	timeNow := i.time.Now(nil)
+
+	// check if end date is expired
+	if membership.EndDate != nil && timeNow.After(*membership.EndDate) {
+		featureMembership = schema.FeatureMembership{
+			Name:              LevelFree,
+			QuotaSwipes:       FeatureSwipeBasic,
+			ShowWhoCanSeeMe:   false,
+			ShowVerifiedLabel: false,
+		}
+
+		// update membership type to free
+		err := i.repo.UpdateOne(ctx, &models.Membership{
+			AccountID:      membership.AccountID,
+			MembershipType: LevelFree,
+			StartDate:      nil,
+			EndDate:        nil,
+			PaymentMethod:  "",
+			UpdateAt:       &timeNow,
+		})
+
+		if err != nil {
+			return nil, err
+		}
+	}
+
 	return &featureMembership, nil
+}
+
+func (i *implementMembershipUseCase) UpdateOne(ctx context.Context, data *schema.UpgradeMembership) error {
+	timeNow := i.time.Now(nil)
+	endDate := timeNow.AddDate(0, data.HowManyMonth, 0)
+
+	return i.repo.UpdateOne(ctx, &models.Membership{
+		AccountID:      data.AccountID,
+		MembershipType: data.LevelName,
+		StartDate:      &timeNow,
+		EndDate:        &endDate,
+		PaymentMethod:  "paypal",
+		UpdateAt:       &timeNow,
+	})
 }

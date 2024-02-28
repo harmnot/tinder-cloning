@@ -20,6 +20,7 @@ func (http *MembershipHandler) RegisterRoute(r chi.Router) chi.Router {
 		r.Use(middleware.JwtAuthMiddleware)
 		r.Route("/v1", func(r chi.Router) {
 			r.Get("/features", http.GetFeaturesHandler)
+			r.Patch("/upgrade", http.UpgradeMembershipHandler)
 		})
 	})
 	return r

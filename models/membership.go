@@ -9,4 +9,5 @@ type Membership struct {
 	StartDate      *time.Time `json:"start_date"`
 	EndDate        *time.Time `json:"end_date"`
 	PaymentMethod  string     `json:"payment_method"`
+	UpdateAt       *time.Time `json:"update_at"`
 }
