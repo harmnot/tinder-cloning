@@ -1,3 +1,11 @@
+# Introduction 
+This is a simple REST API for a simple dating application like Tinder / Bumble. This application is built using Go and PostgreSQL. This application has the following features:
+- User registration
+- User login
+- User profile
+- Make reaction to other user
+- Memberships (free, premium and gold) with different features
+
 # Before run
 make sure you have installed the following tools:
 - Install [Go - 1.22.0](https://www.python.org/downloads/)

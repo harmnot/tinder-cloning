@@ -3,7 +3,6 @@ package usecase
 import (
 	"context"
 	"errors"
-	"fmt"
 	"strings"
 	"tinder-cloning/models"
 	"tinder-cloning/pkg/util"
@@ -25,12 +24,13 @@ func NewSwipesUseCase(
 	repo repository.Repository,
 	membershipUseCase membershipUseCase.MembershipUseCase,
 	accountUseCase accountUseCase.AccountUseCase,
+	time util.Time,
 ) SwipesUseCase {
 	return &implementSwipesUseCase{
 		repo:              repo,
 		membershipUseCase: membershipUseCase,
 		accountUseCase:    accountUseCase,
-		time:              util.ProvideNewTimesCustom(),
+		time:              time,
 	}
 }
 
@@ -59,6 +59,10 @@ func (i *implementSwipesUseCase) GetAllProfile(ctx context.Context, filter schem
 	featureMembership, err := i.membershipUseCase.GetFeatureMembership(ctx, filter.CurrentAccountID)
 	if err != nil {
 		return nil, err
+	}
+
+	if featureMembership == nil {
+		return nil, errors.New("membership not found")
 	}
 
 	if !featureMembership.ShowVerifiedLabel && filter.IsVerified != nil {
@@ -94,8 +98,6 @@ func (i *implementSwipesUseCase) GetAllProfile(ctx context.Context, filter schem
 
 	filter.Gender = defaultFilterGender
 
-	fmt.Println("filter", filter)
-
 	// get all profile
 	accounts, errView := i.repo.ViewAllProfile(ctx, filter)
 	if errView != nil {
@@ -120,6 +122,10 @@ func (i *implementSwipesUseCase) CreateReactionSwipes(ctx context.Context, reqDa
 	featureMembership, errGet := i.membershipUseCase.GetFeatureMembership(ctx, reqData.AccountID)
 	if errGet != nil {
 		return errGet
+	}
+
+	if featureMembership == nil {
+		return errors.New("membership not found")
 	}
 
 	// check if swiped today

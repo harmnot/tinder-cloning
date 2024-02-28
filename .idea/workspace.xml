@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a7357a7-d7a8-4191-98b2-a8c9def0bca6" name="Changes" comment="" />
+    <list default="true" id="5a7357a7-d7a8-4191-98b2-a8c9def0bca6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/swipe/repository/implement_repository_swipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/swipe/repository/implement_repository_swipe.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/swipe/usecase/implement_usecase_swipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/swipe/usecase/implement_usecase_swipe.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +26,9 @@
     </option>
   </component>
   <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,12 +53,27 @@
     "Go Test.TestImplementAccountUseCase_SignUp/Error_From_Database in tinder-cloning/services/account/usecase.executor": "Run",
     "Go Test.TestImplementAccountUseCase_SignUp/Error_Validation in tinder-cloning/services/account/usecase.executor": "Run",
     "Go Test.TestImplementAccountUseCase_SignUp/Success in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementMembershipUseCase_CreateOne in tinder-cloning/services/membership/usecase.executor": "Run",
+    "Go Test.TestImplementMembershipUseCase_CreateOne/CreateOne_Failed in tinder-cloning/services/membership/usecase.executor": "Run",
+    "Go Test.TestImplementMembershipUseCase_CreateOne/CreateOne_success in tinder-cloning/services/membership/usecase.executor": "Run",
+    "Go Test.TestImplementMembershipUseCase_GetFeatureMembership in tinder-cloning/services/membership/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/CreateReactionSwipes_already_swiped_today in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/CreateReactionSwipes_cannot_swipe_yourself in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/CreateReactionSwipes_limit_swipes_today in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/CreateReactionSwipes_success in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/get_error_when_create_reaction_swipes_from_database in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/success_create_reaction_swipes in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_GetAllProfile in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_GetAllProfile/empty_data_because_limit_swipes_today in tinder-cloning/services/swipe/usecase.executor": "Run",
+    "Go Test.TestImplementSwipesUseCase_GetAllProfile/success_get_all_profile in tinder-cloning/services/swipe/usecase.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "last_opened_file_path": "/Users/mhd/Documents/my-app/tinder-cloning",
@@ -70,62 +96,65 @@
       <recent name="$PROJECT_DIR$/services" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build tinder-cloning">
-    <configuration name="go build tinder-cloning" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestImplementSwipesUseCase_GetAllProfile/empty_data_because_limit_swipes_today in tinder-cloning/services/swipe/usecase">
+    <configuration name="TestImplementMembershipUseCase_GetFeatureMembership in tinder-cloning/services/membership/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tinder-cloning" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="tinder-cloning" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestImplementAccountUseCase_SignIn in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="tinder-cloning" />
-      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <working_directory value="$PROJECT_DIR$/services/membership/usecase" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="tinder-cloning/services/account/usecase" />
+      <package value="tinder-cloning/services/membership/usecase" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestImplementAccountUseCase_SignIn\E$" />
+      <pattern value="^\QTestImplementMembershipUseCase_GetFeatureMembership\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestImplementAccountUseCase_SignIn/Error_From_Database in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestImplementSwipesUseCase_CreateReactionSwipes/get_error_when_create_reaction_swipes_from_database in tinder-cloning/services/swipe/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tinder-cloning" />
-      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <working_directory value="$PROJECT_DIR$/services/swipe/usecase" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="tinder-cloning/services/account/usecase" />
+      <package value="tinder-cloning/services/swipe/usecase" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestImplementAccountUseCase_SignIn\E$/^\QError_From_Database\E$" />
+      <pattern value="^\QTestImplementSwipesUseCase_CreateReactionSwipes\E$/^\Qget_error_when_create_reaction_swipes_from_database\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestImplementAccountUseCase_SignIn/Success in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestImplementSwipesUseCase_GetAllProfile in tinder-cloning/services/swipe/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tinder-cloning" />
-      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <working_directory value="$PROJECT_DIR$/services/swipe/usecase" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="tinder-cloning/services/account/usecase" />
+      <package value="tinder-cloning/services/swipe/usecase" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestImplementAccountUseCase_SignIn\E$/^\QSuccess\E$" />
+      <pattern value="^\QTestImplementSwipesUseCase_GetAllProfile\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestImplementAccountUseCase_SignUp in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestImplementSwipesUseCase_GetAllProfile/empty_data_because_limit_swipes_today in tinder-cloning/services/swipe/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="tinder-cloning" />
-      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <working_directory value="$PROJECT_DIR$/services/swipe/usecase" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="tinder-cloning/services/account/usecase" />
+      <package value="tinder-cloning/services/swipe/usecase" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestImplementAccountUseCase_SignUp\E$" />
+      <pattern value="^\QTestImplementSwipesUseCase_GetAllProfile\E$/^\Qempty_data_because_limit_swipes_today\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestImplementSwipesUseCase_GetAllProfile/success_get_all_profile in tinder-cloning/services/swipe/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tinder-cloning" />
+      <working_directory value="$PROJECT_DIR$/services/swipe/usecase" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tinder-cloning/services/swipe/usecase" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestImplementSwipesUseCase_GetAllProfile\E$/^\Qsuccess_get_all_profile\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
@@ -136,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build tinder-cloning" />
-        <item itemvalue="Go Test.TestImplementAccountUseCase_SignUp in tinder-cloning/services/account/usecase" />
-        <item itemvalue="Go Test.TestImplementAccountUseCase_SignIn in tinder-cloning/services/account/usecase" />
-        <item itemvalue="Go Test.TestImplementAccountUseCase_SignIn/Error_From_Database in tinder-cloning/services/account/usecase" />
-        <item itemvalue="Go Test.TestImplementAccountUseCase_SignIn/Success in tinder-cloning/services/account/usecase" />
+        <item itemvalue="Go Test.TestImplementSwipesUseCase_GetAllProfile/empty_data_because_limit_swipes_today in tinder-cloning/services/swipe/usecase" />
+        <item itemvalue="Go Test.TestImplementSwipesUseCase_GetAllProfile/success_get_all_profile in tinder-cloning/services/swipe/usecase" />
+        <item itemvalue="Go Test.TestImplementSwipesUseCase_GetAllProfile in tinder-cloning/services/swipe/usecase" />
+        <item itemvalue="Go Test.TestImplementMembershipUseCase_GetFeatureMembership in tinder-cloning/services/membership/usecase" />
+        <item itemvalue="Go Test.TestImplementSwipesUseCase_CreateReactionSwipes/get_error_when_create_reaction_swipes_from_database in tinder-cloning/services/swipe/usecase" />
       </list>
     </recent_temporary>
   </component>

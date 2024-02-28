@@ -71,6 +71,8 @@ func Api(db *sql.DB) chi.Router {
 		AllowedMethods: []string{"GET", "POST", "PUT", "PATCH", "DELETE", "HEAD"},
 	}))
 
+	timeUtil := util.ProvideNewTimesCustom()
+
 	membershipRepo := _membershipRepo.NewMembershipRepositoryImpl(db)
 	membershipService := _membershipUsecase.NewMembershipUseCase(membershipRepo)
 	membershipHandler.NewMembershipHandler(membershipService).RegisterRoute(r)
@@ -80,7 +82,7 @@ func Api(db *sql.DB) chi.Router {
 	accountHandler.NewAccountHandler(accountService).RegisterRoute(r)
 
 	swipeRepo := _swipeRepo.NewSwipesRepositoryImpl(db)
-	swipeService := _swipeUsecase.NewSwipesUseCase(swipeRepo, membershipService, accountService)
+	swipeService := _swipeUsecase.NewSwipesUseCase(swipeRepo, membershipService, accountService, timeUtil)
 	swipeHandler.NewSwipeHandler(swipeService).RegisterRoute(r)
 
 	return r

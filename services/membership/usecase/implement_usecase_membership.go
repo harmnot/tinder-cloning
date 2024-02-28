@@ -25,17 +25,17 @@ func (i implementMembershipUseCase) CreateOne(ctx context.Context, sqlTx *sql.Tx
 		paymentMethod = data.PaymentMethod
 	}
 
+	if strings.ToLower(data.MembershipType) != LevelFree {
+		data.StartDate = nil
+		data.EndDate = nil
+	}
+
 	payload := &models.Membership{
 		AccountID:      data.AccountID,
 		MembershipType: data.MembershipType,
 		StartDate:      data.StartDate,
 		EndDate:        data.EndDate,
 		PaymentMethod:  paymentMethod,
-	}
-
-	if strings.ToLower(data.MembershipType) != LevelFree {
-		payload.StartDate = nil
-		payload.EndDate = nil
 	}
 
 	return i.repo.CreateOne(ctx, sqlTx, payload)

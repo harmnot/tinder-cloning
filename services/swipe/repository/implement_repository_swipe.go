@@ -72,8 +72,6 @@ func (s *swipeRepositoryImpl) ViewAllProfile(ctx context.Context, props schema.P
 		queryArgs = append(queryArgs, props.PerPage, props.Page)
 	}
 
-	fmt.Println(query)
-
 	rows, err := s.db.QueryContext(ctx, query, queryArgs...)
 	if err != nil {
 		return nil, fmt.Errorf("querying accounts to display: %v", err)
