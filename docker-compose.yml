@@ -1,0 +1,33 @@
+# docker-compose.yml
+version: '3'
+
+services:
+  app:
+    container_name: tinderCloningBackend
+    build: .
+    ports:
+      - ${PORT_APP}:${PORT_APP}
+    depends_on:
+      - db
+  db:
+    container_name: tinderDatabase
+    image: postgres:16.2
+    restart: always
+    environment:
+      PGPASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      PGDATABASE: ${DB_NAME}
+    shm_size: "4gb"
+    logging:
+      driver: none
+    expose:
+      - ${DB_PORT}
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+volumes:
+  postgres_data:

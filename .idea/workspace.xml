@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a7357a7-d7a8-4191-98b2-a8c9def0bca6" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2cvO7r7NMDkfjc25Nun8Y0esNRp" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build tinder-cloning.executor": "Debug",
+    "Go Test.TestImplementAccountUseCase_SignIn in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementAccountUseCase_SignIn/Error_From_Database in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementAccountUseCase_SignIn/Success in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementAccountUseCase_SignUp in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementAccountUseCase_SignUp/Error_From_Database in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementAccountUseCase_SignUp/Error_Validation in tinder-cloning/services/account/usecase.executor": "Run",
+    "Go Test.TestImplementAccountUseCase_SignUp/Success in tinder-cloning/services/account/usecase.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/mhd/Documents/my-app/tinder-cloning",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services/account/schema" />
+      <recent name="$PROJECT_DIR$/services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build tinder-cloning">
+    <configuration name="go build tinder-cloning" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="tinder-cloning" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tinder-cloning" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestImplementAccountUseCase_SignIn in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tinder-cloning" />
+      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tinder-cloning/services/account/usecase" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestImplementAccountUseCase_SignIn\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestImplementAccountUseCase_SignIn/Error_From_Database in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tinder-cloning" />
+      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tinder-cloning/services/account/usecase" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestImplementAccountUseCase_SignIn\E$/^\QError_From_Database\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestImplementAccountUseCase_SignIn/Success in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tinder-cloning" />
+      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tinder-cloning/services/account/usecase" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestImplementAccountUseCase_SignIn\E$/^\QSuccess\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestImplementAccountUseCase_SignUp in tinder-cloning/services/account/usecase" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="tinder-cloning" />
+      <working_directory value="$PROJECT_DIR$/services/account/usecase" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="tinder-cloning/services/account/usecase" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestImplementAccountUseCase_SignUp\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build tinder-cloning" />
+        <item itemvalue="Go Test.TestImplementAccountUseCase_SignUp in tinder-cloning/services/account/usecase" />
+        <item itemvalue="Go Test.TestImplementAccountUseCase_SignIn in tinder-cloning/services/account/usecase" />
+        <item itemvalue="Go Test.TestImplementAccountUseCase_SignIn/Error_From_Database in tinder-cloning/services/account/usecase" />
+        <item itemvalue="Go Test.TestImplementAccountUseCase_SignIn/Success in tinder-cloning/services/account/usecase" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-2946fb9b3188-155fe4b6e3a0-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-233.14475.38" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>
