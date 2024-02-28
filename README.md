@@ -25,6 +25,29 @@ make sure you have installed the following tools:
 >
 > also if you run the test, you can run `make test` to run the test.
 
+# Code Structure
+The code structure is divided into several packages. Each package has its own responsibility. The following is the code structure:
+- `migrations` folder contains the database migration files
+- `app` package contains the main application code
+- `models` package contains the models for the application
+- `pkg` package contains the common packages for the application such as driver,middleware, mapper json, and util.
+   - `driver` package contains the database driver / connector for database connection
+   - `middleware` package contains the middleware for the application
+   - `util` package contains the utility for the application
+- `services` package contains the services for the application
+   - `handler` package contains the handler http for the application
+   - `repository` package contains the repository for the application for managing the database
+   - `usecase` package contains the logic for the application
+   - `schema` package contains the schema for the application, such as request and response
+- `Makefile` contains the commands to run the application
+- `tinder-cloning.postman_collection.json` contains the API documentation
+- `Dockerfile` contains the Dockerfile for the application
+- `docker-compose.yml` contains the Docker Compose file
+- `go.mod` and `go.sum` contains the Go module files
+- `main.go` contains the main application file
+- `README.md` contains the documentation
+- `.env` contains the environment variables
+- `.gitignore` contains the files and folders to be ignored by Git
 
 # API Documentation
 You can use POSTMAN to test the API. The API documentation can be found on this root folder with the name `tinder-cloning.postman_collection.json`
