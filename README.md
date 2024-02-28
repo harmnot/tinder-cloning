@@ -28,3 +28,6 @@ make sure you have installed the following tools:
 
 # API Documentation
 You can use POSTMAN to test the API. The API documentation can be found on this root folder with the name `tinder-cloning.postman_collection.json`
+
+# Database Design
+![tindercloning-database-design](https://github.com/harmnot/tinder-cloning/assets/42674439/319709da-6a2c-42ba-833e-1c4050b16265)
