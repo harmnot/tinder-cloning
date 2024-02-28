@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "f9481dba-92c3-4629-a2e8-674fe48c02e2",
+		"name": "tinder-cloning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7141355",
+		"_collection_link": "https://martian-comet-704399.postman.co/workspace/lp~49acaf4f-ed36-46ba-addf-092ecd5ae929/collection/7141355-f9481dba-92c3-4629-a2e8-674fe48c02e2?action=share&source=collection_link&creator=7141355"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"dony@mail.com\",\n    \"username\": \"dony\",\n    \"password\": \"12345678\",\n    \"gender\": \"MALE\",\n    \"location\": \"Banjarmasin\",\n    \"bio\": \"ini di banjarmasin\",\n    \"avatar\": \"https://example.com/avatar.jpg\",\n    \"date_of_birth\": \"1998-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/account/v1/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"dony@mail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/account/v1/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Membership Features",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWE5YTI0MGUtM2U0Zi00MjEyLWIyOTYtOGZjYWZmNGJiMWZhIiwiZXhwIjoxNzA5MTQ4MTI3fQ.uNAV93q6QsgfzpxvC3MH893tp_uXJItKwAnQEbduyxE",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:9191/membership/v1/features"
+			},
+			"response": []
+		},
+		{
+			"name": "Swipe - Create Reaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiZDg2NTUxZDAtYjgyMS00NzhmLWFmMTMtNDI1NzcwMzlkODg0IiwiZXhwIjoxNzA5MTI1NzQxfQ.DFckBwKCt6GA8OxpouH8at1lmk1CyOfQUfigvJRauYU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"account_id_target\": \"248699bc-341c-4f25-aea2-e81070131e63\",\n    \"swipes_type\": \"pass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9191/swipe/v1/action"
+			},
+			"response": []
+		},
+		{
+			"name": "Swipe - Get All Profile to Swipe Reaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNWE5YTI0MGUtM2U0Zi00MjEyLWIyOTYtOGZjYWZmNGJiMWZhIiwiZXhwIjoxNzA5MTQ4MTI3fQ.uNAV93q6QsgfzpxvC3MH893tp_uXJItKwAnQEbduyxE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9191/swipe/v1/list?page=1&per_page=30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"swipe",
+						"v1",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "30",
+							"description": "limit only up to 30"
+						},
+						{
+							"key": "gender",
+							"value": "all",
+							"description": "all, female, male",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

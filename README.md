@@ -24,3 +24,7 @@ make sure you have installed the following tools:
 > if you don't want to use Dbmate, you can manually the query in `migrations` folder into your database UI.
 >
 > also if you run the test, you can run `make test` to run the test.
+
+
+# API Documentation
+You can use POSTMAN to test the API. The API documentation can be found on this root folder with the name `tinder-cloning.postman_collection.json`

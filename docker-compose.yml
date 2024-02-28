@@ -6,7 +6,7 @@ services:
     container_name: tinderCloningBackend
     build: .
     ports:
-      - ${PORT_APP}:${PORT_APP}
+      - ${SERVER_ADDRESS}:${SERVER_ADDRESS}
     depends_on:
       - db
   db:

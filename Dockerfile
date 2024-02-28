@@ -1,6 +1,7 @@
-# Dockerfile
+ARG port=9191
+
 # Start from the latest golang base image
-FROM golang:latest
+FROM golang:1.22.0-alpine
 
 # Add Maintainer Info
 LABEL maintainer="Your Name <muhammad@myDomainHere.com>"
@@ -20,8 +21,8 @@ COPY . .
 # Build the Go app
 RUN go build -o tinder-cloning .
 
-# Expose port 8181 to the outside
-EXPOSE 8181
+# Expose port 9191 to the outside
+EXPOSE $port
 
 # Run the binary program produced by `go install`
 CMD ["./tinder-cloning"]

@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5a7357a7-d7a8-4191-98b2-a8c9def0bca6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/membership/usecase/implement_usecase_membership_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/swipe/repository/implement_repository_swipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/swipe/repository/implement_repository_swipe.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/swipe/usecase/implement_usecase_swipe.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/swipe/usecase/implement_usecase_swipe.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

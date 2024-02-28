@@ -34,5 +34,12 @@ run-db:
 	docker-compose up -d db
 run-app:
 	go run main.go
+run-services:
+	# run all services
+	docker-compose -f docker-compose.cloud.yaml up -d
+	docker-compose up -d
+build-app-docker:
+	# build docker image
+	docker build --no-cache app
 test:
 	go test -v ./...
