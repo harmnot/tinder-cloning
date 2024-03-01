@@ -2,6 +2,7 @@ package usecase
 
 import (
 	"context"
+	"database/sql"
 	"errors"
 	"tinder-cloning/models"
 	"tinder-cloning/pkg/util"
@@ -148,6 +149,10 @@ func (i *implementAccountUseCase) SingIn(ctx context.Context, payload *schema.Re
 		Email: payload.Email,
 		ID:    nil,
 	})
+	if err != nil && errors.Is(err, sql.ErrNoRows) {
+		return "", errors.New("email or password is incorrect")
+	}
+
 	if err != nil {
 		return "", err
 	}
